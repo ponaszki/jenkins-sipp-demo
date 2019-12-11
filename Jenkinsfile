@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'ctaloi:sipp' 
+            image 'ctaloi/sipp:latest' 
         }
     }
     stages {
