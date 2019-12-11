@@ -5,7 +5,10 @@ pipeline {
         }
     }
     stages {
-        stage('Example test') { 
+        stage('Example test') {
+	    options {
+                timeout(time: 3, unit: 'MINUTES') 
+            } 
             steps {
 		echo ' Hello world !!'
                 sh 'sipp -m 1 -bg -sn uas'
