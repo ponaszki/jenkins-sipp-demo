@@ -9,7 +9,7 @@ pipeline {
             steps {
 		echo ' Hello world !!'
                 sh 'sipp -m 1 -bg -sn uas'
-		sh 'sipp -m 1 -sn uac 127.0.0.1 
+		sh 'sipp -m 1 -bg -sn uac 127.0.0.1 
             }
         }
         stage('Example test 2') {
