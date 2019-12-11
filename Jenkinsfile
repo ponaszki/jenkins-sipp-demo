@@ -1,29 +1,20 @@
 pipeline {
     agent {
         docker {
-            image 'maven:3-alpine' 
-            args '-v /root/.m2:/root/.m2' 
+            image 'ctaloi:sipp' 
         }
     }
     stages {
-        stage('Build') { 
+        stage('Example test') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+		echo ' Hello world !!'
+                sh 'sipp -m 1 -sn uas' 
             }
         }
-        stage('Test') {
+        stage('Example test 2') {
             steps {
-                sh 'mvn test'
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
-        }
- 	stage('Deliver') {
-            steps {
-                sh './jenkins/scripts/deliver.sh'
+		echo 'Hello world !!'
+                sh 'sipp -m 1 -sn uac 127.0.0.1'
             }
         }
     }
