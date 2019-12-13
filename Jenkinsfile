@@ -10,7 +10,7 @@ pipeline {
                 timeout(time: 3, unit: 'MINUTES') 
             } 
             steps {
-		ls /
+		sh 'ls /'
             }
         }
         stage('Example test 2') {
