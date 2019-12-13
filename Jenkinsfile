@@ -12,7 +12,7 @@ pipeline {
             } 
             steps {
 		echo ' Hello world !!'
-                sipp
+                sh 'usr/local/bin/sipp'
 		 
             }
         }
