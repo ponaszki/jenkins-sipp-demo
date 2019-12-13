@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'ctaloi/sipp:latest'
-	    args '--entrypoint bash -v /home/SIPp-by-example:/sipp/examples' 
+	    args '--entrypoint bash' 
         }
     }
     stages {
