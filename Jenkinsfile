@@ -12,8 +12,8 @@ pipeline {
             } 
             steps {
 		echo ' Hello world !!'
-                sh -c 'sipp'
-		sh -c 'sipp' 
+                sipp
+		 
             }
         }
         stage('Example test 2') {
