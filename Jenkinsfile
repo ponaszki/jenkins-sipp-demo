@@ -10,8 +10,7 @@ pipeline {
                 timeout(time: 3, unit: 'MINUTES') 
             } 
             steps {
-		echo ' Hello world !!'
-		sh 'sipp'
+		ls /
             }
         }
         stage('Example test 2') {
