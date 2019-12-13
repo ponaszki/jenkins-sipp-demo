@@ -12,8 +12,6 @@ pipeline {
             } 
             steps {
 		echo ' Hello world !!'
-                sh 'usr/local/bin/sipp'
-		 
             }
         }
         stage('Example test 2') {
