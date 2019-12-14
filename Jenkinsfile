@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'ctaloi/sipp:latest'
+	    args '-it --entrypoint=/bin/bash'
         }
     }
     stages {
