@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'sipp:latest'
-            args '-v /home/GitHub/jenkins-sipp-demo:/home/GitHub/jenkins-sipp-demo' 
+            args '-v /home/GitHub/jenkins-sipp-demo:/home/GitHub/jenkins-sipp-demo -v /home/GitHub/errors:/home/sipp' 
         }
     }
     stages {
