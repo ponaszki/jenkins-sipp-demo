@@ -1,8 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'sipp:latest'
-	    args '-it --entrypoint=/bin/bash'
+            image 'sipp:latest' 
         }
     }
     stages {
